@@ -7,12 +7,7 @@ class BusinessList extends React.Component {
         return(
             <div className="BusinessList">
                 {/* currently hard coded, will access the yelp api later */}
-                <Business />
-                <Business />
-                <Business />
-                <Business />
-                <Business />
-                <Business />
+                {this.props.businesses.map((business, index) => <Business business={business} key={index}/>)}
             </div>
         )
     }
