@@ -6,8 +6,7 @@ class BusinessList extends React.Component {
     render(){
         return(
             <div className="BusinessList">
-                {/* currently hard coded, will access the yelp api later */}
-                {this.props.businesses.map((business, index) => <Business business={business} key={index}/>)}
+                {this.props.businesses.map(business => <Business business={business} key={business.id}/>)}
             </div>
         )
     }
