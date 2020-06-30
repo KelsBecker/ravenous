@@ -4,13 +4,13 @@ import './Business.css';
 
 class Business extends React.Component {
     render(){
-        const {imageSrc, name, address, city, state, zipCode, category, rating, reviewCount} = this.props.business
+        const {imageSrc, name, address, city, state, zipCode, category, rating, reviewCount, url} = this.props.business
         return(
             <div className="Business">
                 <div className="image-container">
                     <img src={imageSrc} alt={name}/>
                 </div>
-                <h2>{name}</h2>
+                <h2 onClick={() => window.open(url)}>{name}</h2>
                 <div className="Business-information">
                     <div className="Business-address">
                         <p>{address}</p>
